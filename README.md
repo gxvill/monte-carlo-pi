@@ -10,5 +10,5 @@ Taking a square of side length 2, we can inscribe a circle of radius one at its 
 board that we will be throwing at. After throwing $$n$$ darts at the board, we know that the ratio of darts in the
 circle to $$n$$ should be $$\frac{\pi}{4}$$, or something close to it.
 
-The law of large numbers dictates that as our $$n \rightarrow \infinity$$, our estimation will converge to the
+The law of large numbers dictates that as our $$n \rightarrow \infty$$, our estimation will converge to the
 actual value of $$\pi$$.
