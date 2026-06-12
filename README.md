@@ -12,3 +12,11 @@ circle to $$n$$ should be $$\frac{\pi}{4}$$, or something close to it.
 
 The law of large numbers dictates that as our $$n \rightarrow \infty$$, our estimation will converge to the
 actual value of $$\pi$$.
+
+## Plots
+
+### Dart Board Plot
+
+This is the visual representation of the dart board. As we 
+
+### Convergence Plot
