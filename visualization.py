@@ -26,7 +26,7 @@ def estimate_pi_visual(num_samples):
     ax.set_aspect('equal')
     ax.set_title(f'pi ={pi_estimate:.4f} (n = {num_samples})')
     ax.legend()
-    plt.savefig(f'monte_carlo_{num_samples}.png')
+    plt.savefig(f'plots/monte_carlo_{num_samples}.png')
     plt.show()
 
 
@@ -49,7 +49,7 @@ def convergence_plot(max_samples=100000, step=100):
     plt.ylabel('Esimate of pi')
     plt.title('Convergence of Monte Carlo pi Estimation')
     plt.legend()
-    plt.savefig('convergence.png')
+    plt.savefig(f'plots/convergence_{max_samples}.png')
     plt.show()
 
 
