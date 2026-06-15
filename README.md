@@ -20,3 +20,7 @@ actual value of $$\pi$$.
 This is the visual representation of the dart board. As we 
 
 ### Convergence Plot
+
+### Variance Reduction
+
+The 
