@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from variance_reduction.py import estimate_pi_stratified
 
 
 def estimate_pi_visual(num_samples):
@@ -42,9 +43,21 @@ def convergence_plot(max_samples=100000, step=100):
         pi_est = 4 * np.sum(inside_flags[:n]) / n
         estimates.append(pi_est)
 
+    sample_sizes = np.array(list(sample_sizes))
+
+    p = np.pi/4
+    var_per_sample = p*(1-p)
+    se = 4 * np.sqrt(var_per_sample / sample_sizes)
+
+    ci_95 = 1.96 * se
+
     plt.figure(figsize=(10, 5))
     plt.plot(sample_sizes, estimates, label='Monte Carlo estimate')
     plt.axhline(y=np.pi, color='r', linestyle='--', label='True pi')
+
+    plt.fill_between(sample_sizes,estimates - ci_95, estimates + ci_95, color='blue',
+                     alpha=0.2, label='95% confidence interval')
+
     plt.xlabel('Number of samples')
     plt.ylabel('Esimate of pi')
     plt.title('Convergence of Monte Carlo pi Estimation')
